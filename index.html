@@ -320,22 +320,27 @@
 
         <!-- ===== ÉTAPES ===== -->
         <section class="steps" aria-labelledby="steps-title">
-          <h3 id="steps-title" class="section-title text-3xl font-bold text-black ">Obtenez IRON IPTV en 3 Simples Étapes</h3>
+          <h3 id="steps-title" class="section-title text-3xl font-bold text-black ">Obtenez Iron TV Pro en 3 Simples Étapes</h3>
+          <p class="steps-lead">Suivez ces 3 étapes pour accéder rapidement à Iron TV Pro&nbsp;: choisissez votre abonnement, recevez vos identifiants et profitez instantanément de milliers de chaînes, films et séries.</p>
           <div class="steps-grid" role="list">
-            <div class="step" id="step1" role="listitem">
-              <h4>ÉTAPE 1</h4>
-              <p>Choisissez votre abonnement</p>
-              <div class="arrow" aria-hidden="true">→</div>
-            </div>
-            <div class="step" id="step2" role="listitem">
-              <h4>ÉTAPE 2</h4>
-              <p>Recevez vos identifiants<br>via WhatsApp ou Email</p>
-              <div class="arrow" aria-hidden="true">→</div>
-            </div>
-            <div class="step" id="step3" role="listitem">
-              <h4>ÉTAPE 3</h4>
-              <p>Profitez de l'expérience IPTV instantanément</p>
-            </div>
+            <article class="step-card" role="listitem">
+              <span class="step-badge">Étape 1</span>
+              <span class="step-icon" aria-hidden="true"><i class="fas fa-shopping-basket"></i></span>
+              <h4>Choisissez votre abonnement</h4>
+              <p>Sélectionnez l’offre qui correspond à vos besoins et profitez du meilleur tarif.</p>
+            </article>
+            <article class="step-card" role="listitem">
+              <span class="step-badge">Étape 2</span>
+              <span class="step-icon" aria-hidden="true"><i class="fas fa-shipping-fast"></i></span>
+              <h4>Recevez vos identifiants</h4>
+              <p>Recevez vos accès Iron TV Pro en quelques minutes via WhatsApp ou email.</p>
+            </article>
+            <article class="step-card" role="listitem">
+              <span class="step-badge">Étape 3</span>
+              <span class="step-icon" aria-hidden="true"><i class="fas fa-tv"></i></span>
+              <h4>Profitez de l’expérience IPTV</h4>
+              <p>Connectez-vous et commencez à regarder vos chaînes, films et séries préférés sans attendre.</p>
+            </article>
           </div>
         </section>
       </div>
@@ -378,16 +383,41 @@
         <h2 id="apps-title" class="section-title fade-in-up">Nos Applications</h2>
 
         <div class="video-wrapper fade-in-up">
+          <!-- YouTube embed to autoplay when section enters viewport -->
           <iframe
+            id="appVideo"
             class="app-video"
             width="100%" height="400"
-            src="https://www.youtube-nocookie.com/embed/HmNeB9Oc0VA"
+            src=""
+            data-src="https://www.youtube.com/embed/HmNeB9Oc0VA?autoplay=1&rel=0&controls=1&showinfo=0"
             title="Iron TV Pro Télécharger - Installation IPTV 2025"
             loading="lazy"
             referrerpolicy="strict-origin-when-cross-origin"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen>
           </iframe>
+          <script>
+            // Auto-play YouTube video when scrolled into view
+            document.addEventListener('DOMContentLoaded', function() {
+              var video = document.getElementById('appVideo');
+              var loaded = false;
+              if ('IntersectionObserver' in window) {
+                var observer = new IntersectionObserver(function(entries) {
+                  entries.forEach(function(entry) {
+                    if (entry.isIntersecting && !loaded) {
+                      video.src = video.getAttribute('data-src');
+                      loaded = true;
+                      observer.disconnect();
+                    }
+                  });
+                }, { threshold: 0.2 }); // 20% visible triggers load/play
+                observer.observe(video);
+              } else {
+                // Fallback: just load on DOM ready
+                video.src = video.getAttribute('data-src');
+              }
+            });
+          </script>
         </div>
 
         <article class="app-content fade-in-up">
@@ -400,13 +430,16 @@
           </p>
 
           <h3>Iron TV Pro Télécharger : 🔍 Qu’est-ce que Iron TV Pro ?</h3>
-          <ul>
-            <li>Iron IPTV</li><li>Iron IP TV</li><li>Iron TV</li><li>Iron TV Max</li>
+          <ul class="app-pill-list">
+            <li>Iron IPTV</li>
+            <li>Iron IP TV</li>
+            <li>Iron TV</li>
+            <li>Iron TV Max</li>
           </ul>
           <p class="app-highlight">➡️ Tous ces noms mènent au même service, avec la même qualité et les mêmes contenus.</p>
 
           <h3>Ce que propose Iron TV Pro :</h3>
-          <ul>
+          <ul class="app-feature-list">
             <li>📺 Chaînes françaises et internationales</li>
             <li>🎬 Films & séries en VOD</li>
             <li>⚽ Sport en direct</li>
@@ -442,7 +475,7 @@
           <p>💬 <a href="https://wa.me/212668618410" target="_blank" rel="noopener noreferrer" class="whatsapp-link">WhatsApp Support</a></p>
 
           <h3>🎁 Test IPTV gratuit de 24h</h3>
-          <ul>
+          <ul class="app-checklist">
             <li>Vérifier la qualité de streaming</li>
             <li>Tester la VOD et les chaînes en direct</li>
             <li>Confirmer la compatibilité de votre appareil</li>
