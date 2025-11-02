@@ -1,0 +1,434 @@
+/* =============================
+   THEME & TOKENS (LIGHT)
+============================= */
+:root{
+  /* Base claire */
+  --bg: #ffffff;
+  --bg-2: #f7f8fc;
+  --panel: #ffffff;
+  --panel-2: #fbfbff;
+  --line: #e9ecf5;
+  --text: #101322;
+  --muted: #5a6280;
+
+  /* Violets (UI) */
+  --violet-1: #6c5ce7;
+  --violet-2: #a29bfe;
+
+  /* On garde tes couleurs titres/CTA */
+  --brand-1: #00e3a5;
+  --brand-2: #35a7ff;
+
+  --accent: var(--violet-1);
+  --danger: #ff5252;
+  --radius: 16px;
+  --radius-sm: 12px;
+  --shadow-1: 0 10px 30px rgba(26, 15, 64, .08);
+  --shadow-2: 0 18px 48px rgba(26, 15, 64, .10);
+  --container: 1200px;
+  --header-h: 76px;
+  --fs-hero: clamp(2.2rem, 3vw + 1.4rem, 3.6rem);
+  --fs-h2: clamp(1.5rem, 1.5vw + 1rem, 2.3rem);
+  --fs-h3: clamp(1.15rem, .9vw + .95rem, 1.6rem);
+  --fs-body: clamp(1rem, .35vw + .86rem, 1.08rem);
+}
+
+/* =============================
+   RESET & BASE
+============================= */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  background:
+    radial-gradient(1200px 800px at 85% -10%, rgba(108,92,231,.05) 0%, transparent 60%),
+    var(--bg);
+  color:var(--text);
+  line-height:1.7;
+  padding-top:var(--header-h);
+  font-size: var(--fs-body);
+}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+:focus-visible{outline:3px solid var(--violet-2);outline-offset:2px;border-radius:10px}
+.container{width:92%;max-width:var(--container);margin:0 auto}
+
+/* =============================
+   HEADER (clair)
+============================= */
+.site-header{
+  position:fixed;inset:0 0 auto 0;z-index:1000;
+  background:rgba(255,255,255,.75);
+  backdrop-filter:saturate(1.2) blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.site-header .container{height:var(--header-h);display:flex;align-items:center;justify-content:space-between}
+.logo img{height:42px;width:auto}
+.main-nav ul{list-style:none;display:flex;gap:26px}
+.main-nav a{color:#2a2f45;font-weight:600;letter-spacing:.2px;padding:10px 0;position:relative}
+.main-nav a::after{
+  content:"";position:absolute;left:0;bottom:0;height:2px;width:0;transition:width .25s ease;
+  background:linear-gradient(90deg,var(--violet-1),var(--violet-2));
+}
+.main-nav a:hover::after{width:100%}
+.burger{display:none;width:38px;height:30px;border:0;background:none;cursor:pointer}
+.burger span{display:block;height:2px;background:#2a2f45;border-radius:2px;transition:.25s}
+.burger span+span{margin-top:7px}
+
+#mobile-menu[hidden]{display:none}
+#mobile-menu{
+  position:fixed;inset:0 0 0 auto;width:min(82%,320px);height:100vh;z-index:1100;
+  background:linear-gradient(180deg,#fff,#fbfbff 55%);
+  border-left:1px solid var(--line);
+  transform:translateX(100%);transition:transform .3s ease;
+  padding:22px 20px 30px; box-shadow: var(--shadow-2);
+}
+#mobile-menu.open{transform:translateX(0)}
+#mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:14px}
+#mobile-menu a{color:#2a2f45;font-size:1.05rem;padding:10px 8px;border-radius:8px}
+#mobile-menu a:hover{background:#f1f3fe}
+@media (max-width: 1000px){.main-nav ul{display:none}.burger{display:block}}
+
+/* =============================
+   HERO (clair, décor violet)
+============================= */
+.hero{
+  position:relative;min-height:calc(100vh - var(--header-h));display:grid;place-items:center;text-align:center;
+  isolation:isolate;overflow:hidden;
+}
+.hero-blob{
+  position:absolute;inset:auto -15% -20% -15%;height:60vh;
+  background:radial-gradient(30% 40% at 50% 50%, rgba(162,155,254,.35), rgba(108,92,231,.15), transparent 60%);
+  filter:blur(40px);transform:translateY(0);
+  animation: blobFloat 9s ease-in-out infinite;
+}
+@keyframes blobFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+.hero-rings{
+  position:absolute;inset:10% 0 auto 0;height:60vh;pointer-events:none;
+  background: radial-gradient(300px 180px at 50% 20%, rgba(108,92,231,.18), transparent 60%),
+              radial-gradient(360px 200px at 20% 70%, rgba(162,155,254,.16), transparent 60%),
+              radial-gradient(360px 200px at 80% 70%, rgba(108,92,231,.14), transparent 60%);
+  opacity:.85;
+}
+.hero-content{position:relative;z-index:1;max-width:880px;margin-inline:auto;padding:0 8px}
+.hero h1 span{background:linear-gradient(90deg,var(--brand-1),var(--brand-2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.hero h2{font-size:clamp(1.1rem,1.2vw + .7rem,1.7rem);margin:12px 0 16px;font-weight:600;color:#3b3f59}
+.hero p{color:var(--muted);margin-bottom:26px}
+.btn{
+  background:linear-gradient(45deg,var(--brand-1),var(--brand-2));
+  color:#061019;padding:14px 26px;border-radius:999px;font-weight:800;
+  box-shadow:0 8px 26px rgba(53,167,255,.25);
+  transition:transform .18s ease, box-shadow .2s ease
+}
+.btn:hover{transform:translateY(-1px) scale(1.03);box-shadow:0 12px 30px rgba(53,167,255,.35)}
+
+/* =============================
+   PRICING (cartes verre)
+============================= */
+.pricing{padding:92px 0;background:var(--bg-2);text-align:center}
+.section-title{font-size:var(--fs-h2);color:var(--brand-1);margin-bottom:10px}
+.section-subtitle,.intro-text{color:#60668a;max-width:900px;margin:0 auto 22px;line-height:1.75}
+.tier-title{font-size:var(--fs-h3);color:var(--brand-2);margin:48px 0 18px}
+.pricing-cards{display:flex;flex-wrap:wrap;gap:24px;justify-content:center;margin-bottom:24px}
+.card{
+  position:relative;background:linear-gradient(180deg,#ffffff,#fbfbff);
+  border:1px solid var(--line);border-radius:var(--radius);padding:22px;
+  box-shadow:var(--shadow-1);text-align:left;flex:0 1 280px;
+  transition:transform .18s ease, box-shadow .25s ease, border-color .2s ease;
+}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(26,15,64,.14);border-color:#dde2f4}
+.card h4{font-size:1.15rem;margin-bottom:6px}
+.duration{color:#6b7394;font-size:.95rem;margin-bottom:6px}
+.price{font-size:1.95rem;color:var(--brand-1);margin:10px 0 14px;font-weight:800}
+.card ul{list-style:none;margin:0 0 18px;color:#3d4462}
+.card ul li{margin:8px 0;display:flex;gap:8px;align-items:flex-start}
+.card ul li::before{content:"";width:8px;height:8px;border-radius:999px;margin-top:.45rem;background:linear-gradient(90deg,var(--violet-1),var(--violet-2))}
+.card .btn{display:inline-block;padding:12px 18px}
+
+/* Premium mise en avant */
+.pricing-cards > .card.highlight{
+  order:2;flex:0 1 320px;transform:scale(1.06);z-index:2;border:2px solid var(--brand-1);
+  box-shadow:0 14px 44px rgba(0,227,165,.25);
+  background:linear-gradient(180deg,#ffffff,#f5fbff);
+}
+.pricing-cards > .card.highlight::before{
+  content:"⭐ Populaire";position:absolute;top:-12px;right:-12px;background:var(--brand-2);color:#061018;font-size:.8rem;font-weight:700;padding:4px 8px;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,.08)
+}
+.pricing-cards > .card.highlight .price{
+  font-size:2.25rem;line-height:1.1;background:linear-gradient(90deg,var(--brand-1),var(--brand-2));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;
+  text-shadow:0 0 24px rgba(0,227,165,.15);
+}
+.pricing-cards > .card.highlight .price::after{
+  content:"–35% vs mensuel";margin-left:10px;padding:4px 8px;font-size:.72rem;font-weight:800;color:#061018;background:var(--brand-2);border-radius:999px;box-shadow:0 6px 18px rgba(53,167,255,.18)
+}
+
+/* Étapes */
+.steps{max-width:900px;margin:56px auto 0}
+.steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:18px}
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);padding:20px;text-align:center;box-shadow:var(--shadow-1)}
+.step h4{color:var(--brand-1);font-size:1.05rem;margin-bottom:8px}
+.step{transition:transform .25s ease, box-shadow .35s ease, border-color .25s ease, opacity .25s ease, background .25s ease;opacity:.98}
+.step.active{transform:translateY(-2px) scale(1.03);border-color:rgba(108,92,231,.35);box-shadow:0 14px 28px rgba(108,92,231,.15), 0 0 0 3px rgba(108,92,231,.08) inset;background:#fafaff}
+
+/* Popup */
+.popup-overlay{position:fixed;inset:0;background:rgba(20,18,28,.35);display:flex;justify-content:center;align-items:center;z-index:9999;padding:18px}
+.popup-overlay[hidden]{display:none}
+.popup-content{width:min(520px,96vw);background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px;color:var(--text);box-shadow:var(--shadow-2);position:relative}
+.popup-close{position:absolute;top:10px;right:12px;width:38px;height:38px;border-radius:12px;background:#f5f6ff;border:1px solid #e2e7fb;color:#4b4f6b;cursor:pointer}
+.popup-content h2{margin-bottom:14px;color:var(--brand-1);text-align:center;font-size:1.4rem}
+.popup-content input{width:100%;padding:12px;border-radius:12px;border:1px solid #e2e7fb;background:#fff;color:#1c223a;margin-bottom:10px}
+
+/* Apps */
+.app-section{padding:70px 0;background:linear-gradient(180deg,#fff,#f9f9ff)}
+.app-section .section-title{color:var(--accent);text-align:center;margin-bottom:26px}
+.video-wrapper{position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:16px;margin:0 auto 26px;max-width:900px;box-shadow:var(--shadow-1)}
+.video-wrapper iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.app-content{max-width:900px;margin:0 auto;line-height:1.8;color:#313653}
+.app-content h3{color:var(--accent);margin-top:28px;font-size:1.2rem}
+.app-content table{width:100%;border-collapse:collapse;margin:18px 0;border:1px solid var(--line);background:#fff}
+.app-content th,.app-content td{border:1px solid var(--line);padding:10px 12px}
+
+/* Contact */
+.contact-section{max-width:760px;margin:64px auto;padding:26px;background:#fff;color:#2a2f45;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow-1)}
+.contact-section h2{color:var(--accent);text-align:center;margin-bottom:18px}
+.contact-form{display:grid;gap:14px}
+.contact-form input,.contact-form select,.contact-form textarea{padding:12px;border-radius:12px;border:1px solid #e2e7fb;background:#fff;color:#2a2f45}
+
+/* Footer (clair) */
+.footer{background:linear-gradient(180deg,#fff,#fafaff);color:#4a4f67;padding:56px 20px 24px;border-top:1px solid var(--line)}
+.footer a{color:#4a4f67}
+.footer a:hover{color:#1d2140;text-decoration:underline;text-underline-offset:3px}
+.footer-container{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(12,1fr);column-gap:32px;row-gap:28px}
+.footer-section{grid-column:span 4;min-width:0}
+.footer h3{font-size:1.25rem;font-weight:700;background:linear-gradient(90deg, var(--brand-1), var(--brand-2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.footer h4{font-size:1.05rem;font-weight:700;color:#1f2342;margin:0 0 12px}
+.footer p{color:#5b5f79;font-size:.95rem}
+.footer ul{list-style:none;padding:0;margin:0}
+.footer li+li{margin-top:10px}
+.icon-svg{width:18px;height:18px;flex-shrink:0;color:var(--brand-2);fill:currentColor;transition:transform .2s ease}
+.footer a:hover .icon-svg{transform:translateY(-1px) scale(1.08)}
+.footer-bottom{max-width:1200px;margin:24px auto 0;padding-top:18px;border-top:1px solid var(--line);text-align:center;color:#6a6f89;font-size:.9rem}
+
+@media (max-width: 1024px){.footer-container{grid-template-columns:repeat(6,1fr)}.footer-section{grid-column:span 6}}
+@media (max-width: 640px){.footer{padding:44px 16px 20px}.footer-container{grid-template-columns:repeat(4,1fr);column-gap:20px;row-gap:22px}.footer-section{grid-column:span 4}}
+
+/* WhatsApp FAB */
+#whatsapp-button{position:fixed;bottom:20px;right:20px;z-index:9999;width:64px;height:64px;display:grid;place-items:center;background:#25D366;color:#090909;border-radius:50%;box-shadow:0 10px 24px rgba(0,0,0,.12), 0 0 0 4px rgba(37,211,102,.16);transition:transform .2s ease, box-shadow .2s ease, filter .2s ease}
+#whatsapp-button i{font-size:34px;line-height:1}
+#whatsapp-button:hover{transform:translateY(-2px) scale(1.06);filter:brightness(1.05);box-shadow:0 16px 36px rgba(0,0,0,.18), 0 0 0 8px rgba(37,211,102,.18)}
+@media (max-width: 480px){#whatsapp-button{width:56px;height:56px}#whatsapp-button i{font-size:28px}}
+
+/* Anim génériques */
+.fade-in-up{opacity:0;transform:translateY(30px);transition:opacity .7s ease-out,transform .7s ease-out}
+.fade-in-up.visible{opacity:1;transform:translateY(0)}
+
+/* Boutons Commander (couleurs conservées) */
+.pricing .order-btn{
+  display:inline-flex;align-items:center;justify-content:center;margin:14px auto 0;padding:14px 28px;min-width:200px;
+  border-radius:999px;font-weight:900;font-size:1.06rem;
+  background:linear-gradient(45deg, var(--brand-1), var(--brand-2));color:#061019;
+  box-shadow:0 8px 22px rgba(53,167,255,.22);
+  transition:transform .18s ease, box-shadow .25s ease, filter .2s ease;
+}
+.pricing .order-btn:hover{
+  transform:translateY(-2px) scale(1.07);
+  filter:brightness(1.08);
+  box-shadow:0 14px 36px rgba(53,167,255,.36), 0 0 0 8px rgba(0,227,165,.16);
+}
+@media (max-width: 900px){
+  .pricing-cards{flex-direction:column;align-items:center}
+  .pricing .order-btn{width:100%;max-width:none;padding:16px 22px}
+}
+
+/* Accessibilité : skip-link masqué visuellement mais focusable */
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+
+/* ===== Bouton principal (submit) — violet épuré ===== */
+.btn-violet{
+  --violet-1: #6c5ce7;
+  --violet-2: #a29bfe;
+  display:inline-flex; align-items:center; justify-content:center;
+  gap:10px;
+  width:100%;
+  padding:14px 22px;
+  border-radius:999px;
+  background: linear-gradient(45deg, var(--violet-1), var(--violet-2));
+  color:#fff;
+  font-weight:800; font-size:1.05rem; letter-spacing:.1px;
+  border:0;
+  box-shadow: 0 10px 24px rgba(108,92,231,.25);
+  transition: transform .18s ease, box-shadow .25s ease, filter .2s ease;
+}
+.btn-violet:hover{ transform: translateY(-2px) scale(1.02); filter: brightness(1.03); box-shadow: 0 16px 40px rgba(108,92,231,.35); }
+.btn-violet:focus-visible{ outline:none; box-shadow: 0 0 0 3px #fff, 0 0 0 7px rgba(108,92,231,.55); }
+.btn-violet:disabled{ opacity:.6; cursor:not-allowed; transform:none; }
+
+/* Spinner discret pour l'état "envoi" */
+.btn-violet .btn-spinner{
+  width:16px; height:16px; border-radius:50%;
+  border:2px solid rgba(255,255,255,.6);
+  border-top-color:#fff;
+  display:none;
+  animation: spin .8s linear infinite;
+}
+.btn-violet.loading .btn-spinner{ display:inline-block; }
+.btn-violet.loading .btn-label{ opacity:.85; }
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ===== Groupe d’actions secondaires (WhatsApp / Mail) ===== */
+.contact-actions{
+  margin-top:18px;
+  display:flex; gap:12px; flex-wrap:wrap;
+}
+.contact-actions a{
+  display:inline-flex; align-items:center; justify-content:center;
+  gap:10px; padding:12px 18px; border-radius:999px;
+  font-weight:800; font-size:1rem; text-decoration:none;
+  transition: transform .18s ease, box-shadow .25s ease, background .2s ease, color .2s ease, border-color .2s ease;
+}
+
+/* WhatsApp (vert poli, même fonction) */
+.btn-whatsapp{
+  background:#25D366; color:#041a0e;
+  box-shadow: 0 8px 22px rgba(37,211,102,.28);
+}
+.btn-whatsapp:hover{ transform: translateY(-2px) scale(1.02); box-shadow:0 14px 36px rgba(37,211,102,.38); }
+.btn-whatsapp:focus-visible{ outline:none; box-shadow:0 0 0 3px #fff, 0 0 0 7px rgba(37,211,102,.55); }
+
+/* Mail (outline violet, très clean) */
+.btn-outline{
+  --violet-1:#6c5ce7;
+  color:#2a2e45; background:#fff;
+  border:2px solid var(--violet-1);
+}
+.btn-outline:hover{ background:rgba(108,92,231,.06); transform: translateY(-2px) scale(1.02); }
+.btn-outline:focus-visible{ outline:none; box-shadow:0 0 0 3px #fff, 0 0 0 7px rgba(108,92,231,.45); }
+
+/* Icônes */
+.contact-actions i{ font-size:1.1rem; line-height:1; }
+
+/* Petits écrans: full width */
+@media (max-width: 600px){
+  .contact-actions a{ flex:1 1 100%; }
+}
+
+/* — Supprime les anciens styles si présents — */
+.contact-form button[type="submit"]{ all: unset; }       /* reset l'ancien bouton */
+.contact-form button[type="submit"]{ all: revert; }      /* rebase navigateur */
+.contact-form button[type="submit"]{ all: initial; }     /* puis applique la nouvelle classe à l’HTML (btn-violet) */
+/* (Le plus simple reste d'utiliser la classe .btn-violet sur le bouton directement) */
+
+/* ===== Boutons secondaires : gauche / droite en desktop ===== */
+.contact-actions{
+  margin-top:18px;
+  display:flex;
+  justify-content:space-between;   /* WhatsApp collé à gauche, Mail à droite */
+  align-items:center;
+  gap:12px;                        /* petit espace entre eux si la place manque */
+  width:100%;
+}
+
+.contact-actions a{
+  flex:0 0 auto;
+  min-width:180px;                 /* confort visuel */
+  text-align:center;
+  padding:12px 24px;
+  border-radius:999px;
+  font-weight:800;
+  transition:transform .18s ease, box-shadow .25s ease, background .2s ease, color .2s ease, border-color .2s ease;
+}
+
+/* Styles existants conservés */
+.btn-whatsapp{
+  background:#25D366; color:#041a0e;
+  box-shadow:0 8px 22px rgba(37,211,102,.28);
+}
+.btn-outline{
+  background:#fff; color:#2a2e45;
+  border:2px solid #6c5ce7;
+}
+
+/* ===== Mobile : pile en colonne, pleine largeur ===== */
+@media (max-width: 600px){
+  .contact-actions{
+    flex-direction:column;
+    align-items:stretch;           /* étire à 100% */
+    gap:12px;
+  }
+  .contact-actions a{
+    width:100%;
+    min-width:0;                   /* laisse respirer sur petits écrans */
+  }
+}
+
+/* ===== HERO corrigé (titre + espacement) ===== */
+.hero{
+  position:relative;
+  min-height:calc(85vh - var(--header-h)); /* avant 100vh, réduit le vide */
+  display:grid;
+  place-items:center;
+  text-align:center;
+  isolation:isolate;
+  overflow:hidden;
+}
+
+.hero-content{
+  position:relative;
+  z-index:1;
+  max-width:880px;
+  margin-inline:auto;
+  padding:0 8px;
+  margin-top:-40px; /* remonte le bloc titre, réduit l’espace vide */
+}
+
+.hero h1{
+  font-size:clamp(2.8rem, 5vw + 1.6rem, 5rem); /* titre plus grand */
+  font-weight:800;
+  line-height:1.1;
+}
+.hero h1 span{
+  background:linear-gradient(90deg,var(--brand-1),var(--brand-2));
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  color:transparent;
+}
+
+.hero h2{
+  font-size:clamp(1.2rem,1.4vw + .9rem,2rem);
+  margin:16px 0 20px;
+  font-weight:600;
+  color:#3b3f59;
+}
+
+.hero p{
+  color:var(--muted);
+  margin-bottom:26px;
+}
+
+/* Force l'icône FA à s'afficher dans le FAB WhatsApp */
+#whatsapp-button i.fab.fa-whatsapp{
+  display:inline-block;
+  color:#080808 !important;
+  font-size:34px !important;
+  line-height:1 !important;
+
+  /* Le point clé : force la bonne police Brands */
+  font-family: "Font Awesome 5 Brands" !important;
+  font-weight: 400 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Si un reset global cassait les pseudo-éléments */
+#whatsapp-button i.fab.fa-whatsapp::before{
+  display:inline-block;
+}
+
+/* à mettre en bas du fichier pour écraser l’ancien style */
+.pricing-cards > .card.highlight .price::after{
+  content: none !important;
+  display: none !important;
+}

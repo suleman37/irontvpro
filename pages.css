@@ -1,0 +1,66 @@
+/* Typo des pages de contenu (proche du thème existant) */
+:root{
+  --page-max: 900px;
+}
+
+.page-hero{
+  position: relative;
+  min-height: 42vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background: url('https://images.unsplash.com/photo-1590080876440-e3d1d4bb7dc9?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  isolation: isolate;
+}
+.page-hero__overlay{
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(800px 400px at 20% 10%, rgba(0,227,165,.18) 0%, transparent 65%),
+    linear-gradient(180deg, rgba(6,10,18,.85) 0%, rgba(6,10,18,.3) 60%, rgba(6,10,18,.85) 100%);
+  z-index: 0;
+}
+.page-hero__content{ position: relative; z-index: 1; max-width: var(--page-max); margin-inline: auto; padding: 0 8px; }
+.page-hero h1{ font-size: clamp(1.8rem, 3.5vw + .8rem, 2.6rem); font-weight: 800; margin-bottom: 8px; }
+.page-hero h1 span{
+  background: linear-gradient(90deg,var(--brand-1, #00e3a5),var(--brand-2, #35a7ff));
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color: transparent; color: transparent;
+}
+.page-hero .lead{ color: var(--muted, #a7b0c0); }
+
+/* Prose */
+.prose{
+  max-width: var(--page-max);
+  margin: 42px auto 70px;
+  color: var(--text, #eef2f8);
+  line-height: 1.8;
+}
+.prose h2{
+  font-size: clamp(1.25rem, 1.2vw + 1rem, 1.6rem);
+  margin: 28px 0 10px;
+  color: var(--brand-1, #00e3a5);
+}
+.prose h3{
+  font-size: clamp(1.05rem, .9vw + .9rem, 1.25rem);
+  margin: 22px 0 6px;
+  color: var(--brand-2, #35a7ff);
+}
+.prose p{ margin: 10px 0; color: #dbe6f7; }
+.prose em{ color: #b8c6da; }
+.prose strong{ font-weight: 700; }
+.prose ul{ padding-left: 18px; margin: 8px 0 12px; }
+.prose ul li{ margin: 6px 0; }
+.prose hr.sep{
+  border: 0; border-top: 1px solid #1f2633; margin: 28px 0;
+}
+
+/* Footer: on garde le style existant de style.css */
+
+/* ===== Pages légales – micro-ajustements ===== */
+.prose.legal p { color:#dbe6f7; }
+.prose.legal a { color: var(--brand-2, #35a7ff); }
+.prose.legal a:hover { text-decoration: underline; }
+
+.prose.legal h2 {
+  scroll-margin-top: 90px; /* ancrage propre si on crée un sommaire plus tard */
+}

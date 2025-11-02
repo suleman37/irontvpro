@@ -1,0 +1,116 @@
+/* Thème blanc & violet, compatible avec style.css existant */
+:root{
+  --violet-1:#6c5ce7;
+  --violet-2:#a29bfe;
+}
+
+/* HERO */
+.dl-hero{
+  padding:84px 0 24px;
+  background:linear-gradient(180deg,#ffffff, #f8f9ff);
+}
+.dl-hero h1{
+  text-align:center;
+  font-size:clamp(2rem, 3.4vw + 1rem, 3.4rem);
+  line-height:1.1; font-weight:800; margin:0 0 10px;
+}
+.dl-hero h1 span{
+  background:linear-gradient(90deg,var(--brand-1,#00e3a5),var(--brand-2,#35a7ff));
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;
+}
+.dl-hero .lead{ text-align:center; color:#3b3f59; margin:0 0 16px; }
+.dl-hero-tip{
+  display:flex; align-items:flex-start; gap:10px; justify-content:center;
+  color:#2b2f47; background:#fff; border:1px solid #e6e9f6; border-radius:12px;
+  padding:12px 16px; box-shadow:0 10px 28px rgba(26,15,64,.06);
+}
+.dl-hero-tip kbd{ background:#eef1ff; border:1px solid #dfe4ff; padding:2px 6px; border-radius:6px; font-weight:700; }
+.dl-hero-tip .copy.small{ padding:6px 10px; font-size:.88rem; border-radius:999px; }
+
+/* GRID */
+.dl-grid{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:18px; padding:26px 0 34px;
+}
+
+/* CARD */
+.dl-card{
+  background:linear-gradient(180deg,#ffffff,#f9fbff);
+  border:1px solid #e9ecf5; border-radius:16px; padding:20px;
+  box-shadow:0 10px 26px rgba(26,15,64,.06);
+  display:flex; flex-direction:column; gap:10px;
+}
+.dl-meta{ display:flex; align-items:center; gap:10px; }
+.dl-meta h2{ margin:0; font-size:1.2rem; }
+.dl-meta .tag{
+  margin-left:auto; font-size:.8rem; font-weight:800; padding:4px 8px; border-radius:999px;
+  color:#061019; background:linear-gradient(45deg,var(--brand-1,#00e3a5),var(--brand-2,#35a7ff));
+}
+.dl-card .desc{ color:#3d4462; margin:0; }
+.dl-card .bullets{ margin:0; padding-left:18px; color:#4b5374; }
+.dl-card .bullets li{ margin:4px 0; }
+.dl-card .actions{
+  display:flex; gap:10px; align-items:center; margin-top:auto; flex-wrap:wrap;
+}
+.dl-card .btn{
+  background:linear-gradient(45deg,var(--brand-1,#00e3a5),var(--brand-2,#35a7ff));
+  color:#061019; padding:12px 18px; border-radius:999px; font-weight:900; box-shadow:0 8px 22px rgba(53,167,255,.18);
+}
+.dl-card .btn:hover{ transform:translateY(-2px); box-shadow:0 14px 32px rgba(53,167,255,.28); }
+.dl-card .copy{
+  border:2px solid var(--violet-1); background:#fff; color:#2a2e45; padding:10px 14px; border-radius:999px; font-weight:800;
+}
+.dl-card .copy:hover{ background:rgba(108,92,231,.06); }
+
+/* HELP */
+.dl-help{ padding-bottom:64px; }
+.dl-help h3{ color:var(--violet-1); margin-bottom:8px; }
+.dl-help ol{ color:#3b3f59; line-height:1.7; }
+
+/* Centrer la grille dans le conteneur */
+.dl-grid{
+  max-width: 1100px;             /* centre la grille */
+  margin-inline: auto;
+  justify-items: center;         /* centre chaque carte */
+}
+
+/* Carte centrée */
+.dl-card{
+  align-items: center;           /* centre tous les enfants */
+  text-align: center;
+  width: 100%;
+  max-width: 360px;              /* largeur confortable */
+  padding-top: 22px;
+}
+
+/* Logo en haut, centré */
+.dl-logo{
+  width: 110px; height: 110px; object-fit: contain;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 6px 16px rgba(23,23,50,.08));
+}
+
+/* Titre + badge */
+.dl-meta{
+  width: 100%;
+  justify-content: center;
+  gap: 10px;
+}
+.dl-meta .tag{ margin-left: 0; }
+
+/* Liste centrée et compacte */
+.dl-card .bullets{
+  list-style: none; padding: 0; margin: 6px 0 10px;
+}
+.dl-card .bullets li::before{
+  content: "• "; color: var(--violet-1); font-weight: 900;
+}
+
+/* Boutons : centrés et sur 2 lignes max */
+.dl-card .actions{ justify-content: center; }
+
+/* Responsive — 1 carte par ligne sous 640px */
+@media (max-width: 640px){
+  .dl-grid{ grid-template-columns: 1fr; }
+  .dl-card{ max-width: 480px; margin-inline: auto; }
+}

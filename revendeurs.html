@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr" class="theme-light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Revendeurs – Iron TV Pro (IPTV) | Packs & crédits</title>
+  <meta name="description" content="Devenez revendeur Iron TV Pro : packs de crédits, support dédié, activation instantanée. Commande sécurisée.">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+
+  <link rel="canonical" href="https://www.ironpro.ma/revendeurs.html" />
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-dBwexvYxSg2bYpSl5VJFGk3jfbQ3VIAtF+wNCz7r+G2kZZgwyUr0YJIUKGwEuKXXSb9VjA36TObgU4NfJ5rYkg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- CSS revendeurs (blanc & violet) -->
+  <link rel="stylesheet" href="revendeurs.css?v=2025-09-12-light-violet" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="logo" aria-label="Retour à l’accueil">
+        <img src="iron-tv-pro-logo.png" alt="Iron TV Pro — IPTV premium" width="160" height="40" decoding="async">
+      </a>
+
+      <nav class="main-nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/#tarifs">Tarifs</a></li>
+          <li><a href="revendeurs.html" aria-current="page">Revendeurs</a></li>
+          <li><a href="/#nos-applications">Applications</a></li>
+           <li><a href="telechargement.html" aria-current="page">Téléchargements</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+
+        <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+      </nav>
+    </div>
+    <div id="mobile-menu" class="mobile-menu" hidden></div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero hero-resellers" aria-labelledby="resellers-title">
+      <div class="hero-blob" aria-hidden="true"></div>
+      <div class="hero-rings" aria-hidden="true"></div>
+      <div class="container">
+        <div class="hero-content">
+          <h1 id="resellers-title"><span>Programme Revendeurs</span></h1>
+          <h2>Crédits IPTV, marges attractives & activation instantanée</h2>
+          <p>Des packs flexibles, un support dédié, et une plateforme fiable pour développer votre activité.</p>
+          <a href="#packs" class="btn">Voir les packs</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PACKS -->
+    <section id="packs" class="pricing re-sellers" aria-labelledby="packs-title">
+      <div class="container">
+        <h2 id="packs-title" class="section-title">Packs Revendeurs</h2>
+        <p class="section-subtitle">Choisissez le volume de crédits qui convient à votre business.</p>
+
+        <div class="pricing-cards">
+          <!-- Standard -->
+          <article class="card" data-package-id="RV-STD">
+            <h4>Standard</h4>
+            <p class="duration">30 crédits (≈ 5 codes)</p>
+            <p class="price">120 € </p>
+            <ul>
+              <li>Activation immédiate</li>
+              <li>Support prioritaire</li>
+              <li>Compatible multi-appareils</li>
+              <li>VOD & chaînes premium</li>
+              <li>Facture pro sur demande</li>
+            </ul>
+            <button type="button" class="btn order-btn">Commander</button>
+          </article>
+
+          <!-- Express -->
+          <article class="card" data-package-id="RV-EXP">
+            <h4>Express</h4>
+            <p class="duration">60 crédits (≈ 10 codes)</p>
+            <p class="price">220 € </p>
+            <ul>
+              <li>Meilleur coût par crédit</li>
+              <li>Activation immédiate</li>
+              <li>Support prioritaire</li>
+              <li>Multi-appareils + VOD</li>
+              <li>Facture pro sur demande</li>
+            </ul>
+            <button type="button" class="btn order-btn">Commander</button>
+          </article>
+
+          <!-- Premium -->
+          <article class="card highlight" data-package-id="RV-PRM">
+            <h4>Premium</h4>
+            <p class="duration">120 crédits (≈ 20 codes)</p>
+            <p class="price">300 € </p>
+            <ul>
+              <li>Coût/crédit le plus bas</li>
+              <li>Activation immédiate</li>
+              <li>Support dédié 7j/7</li>
+              <li>Accès bêta nouveautés</li>
+              <li>Facture & conditions pro</li>
+            </ul>
+            <button type="button" class="btn order-btn">Commander</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- POPUP COMMANDE -->
+    <div id="popupOverlay" class="popup-overlay" hidden>
+      <div class="popup-content" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+        <button id="popupClose" class="popup-close" aria-label="Fermer la fenêtre">&times;</button>
+        <h2 id="popupTitle">Finaliser ma commande revendeur</h2>
+
+        <form id="orderForm" novalidate>
+          <label for="name">Nom complet</label>
+          <input type="text" id="name" name="name" placeholder="Nom complet" required autocomplete="name" />
+
+          <label for="phone">Téléphone</label>
+          <input type="tel" id="phone" name="phone" placeholder="Téléphone" required inputmode="tel" autocomplete="tel"
+                 pattern="^[0-9+()\\s\\-]{6,}$" />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Email" required autocomplete="email" />
+
+          <p id="packageDisplay" class="pkg-title" aria-live="polite"></p>
+          <p id="packagePrice" class="pkg-price" aria-live="polite"></p>
+          <p id="packageDuration" class="pkg-duration" aria-live="polite"></p>
+
+          <input type="hidden" id="package" name="package" />
+          <input type="hidden" id="price" name="price" />
+          <input type="hidden" id="duration" name="duration" />
+
+          <button type="submit" class="btn submit-btn">Commander</button>
+        </form>
+        <div id="orderFormMessage" class="form-message" aria-live="polite"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container container">
+      <section class="footer-section">
+        <a href="/" class="logo">
+          <img src="iron-tv-pro-logo.png" alt="Iron TV Pro — IPTV premium" width="160" height="40" decoding="async">
+        </a>
+        <p>Iron TV Pro, la solution IPTV stable & rentable pour les pros. Crédits flexibles et support réactif.</p>
+      </section>
+
+      <nav class="footer-section" aria-label="Liens utiles">
+        <h4>Liens utiles</h4>
+        <ul>
+          <li><a href="/#tarifs" class="footer-link">
+            <svg class="icon-svg" viewBox="0 0 24 24"><path d="M3 12l18-12v24z"/></svg>
+            Tarifs
+          </a></li>
+          <li><a href="revendeurs.html" class="footer-link" aria-current="page">
+            <svg class="icon-svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>
+            Revendeurs
+          </a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-section" aria-label="À propos">
+        <h4>À Propos</h4>
+        <ul>
+          <li><a href="A-propos.html" class="footer-link">
+            <svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/></svg>
+            À Propos
+          </a></li>
+          <li><a href="Conditions.html" class="footer-link">
+            <svg class="icon-svg" viewBox="0 0 24 24"><path d="M4 4h16v2H4z"/></svg>
+            Conditions
+          </a></li>
+          <li><a href="Confidentialite.html" class="footer-link">
+            <svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 4l4 4H8z"/></svg>
+            Confidentialité
+          </a></li>
+          <li><a href="remboursement.html" class="footer-link">
+            <svg class="icon-svg" viewBox="0 0 24 24"><path d="M4 7h16v10H4zM4 11h16"/></svg>
+            Politique de remboursement
+          </a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Iron TV Pro – Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp FAB -->
+<a href="https://wa.me/212668618410" target="_blank" id="whatsapp-button" aria-label="WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="34" height="34" fill="white" aria-hidden="true">
+    <path d="M380.9 97.1C339-5.8 223.5-33.9 130.4 19.4 62.1 57.3 16 127.1 16 204c0 43.3 14.6 83.3 39.2 115.6L0 480l165.7-54.7c30.4 8.2 62.6 12.6 95.3 12.6 92.8 0 174.4-61.6 201.7-150.1 28.1-91.8-6.9-189.1-81.8-240.7zM261 372c-27.7 0-55.1-7-79.5-20.2l-5.7-3.2-95.2 31.4 31-92-3.7-5.8c-20-30.9-30.5-66.6-30.5-103.7 0-104.5 85-189.5 189.5-189.5 50.6 0 98.2 19.7 133.9 55.4 37.7 37.7 56.1 88.7 52.1 141.6C448 292.3 364.1 372 261 372zm88.9-138.2c-4.7-2.4-27.7-13.6-32-15.1-4.3-1.6-7.5-2.4-10.7 2.4-3.2 4.7-12.2 15.1-15 18.2-2.7 3.2-5.3 3.5-9.9 1.2-27.7-13.6-45.8-24.4-64.4-55.1-4.9-8.4 4.9-7.8 13.6-25.9 1.5-3.2.8-6-0.4-8.4-1.2-2.4-10.7-25.9-14.7-35.4-3.9-9.4-7.9-8.1-10.7-8.2-2.7-.1-5.9-.1-9.1-.1-3.2 0-8.4 1.2-12.8 6-4.4 4.7-16.8 16.4-16.8 40.1 0 23.7 17.2 46.5 19.6 49.7 2.4 3.2 34 52 82.6 73.3 48.6 21.3 48.6 14.2 57.3 13.3 8.7-.9 27.7-11.4 31.6-22.4 3.9-11 3.9-20.6 2.7-22.6-1.2-2-4.3-3.2-9-5.7z"/>
+  </svg>
+</a>
+
+
+  <!-- JS -->
+  <script src="revendeurs.js?v=2025-09-12-light-violet" defer></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Accueil -->
+  <url>
+    <loc>https://www.ironpro.ma/</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ironpro.ma/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ironpro.ma/"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://www.ironpro.ma/"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.ironpro.ma/"/>
+    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://www.ironpro.ma/"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://www.ironpro.ma/"/>
+  </url>
+
+  <!-- Revendeurs -->
+  <url>
+    <loc>https://www.ironpro.ma/revendeurs.html</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ironpro.ma/revendeurs.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ironpro.ma/revendeurs.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://www.ironpro.ma/revendeurs.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.ironpro.ma/revendeurs.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://www.ironpro.ma/revendeurs.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://www.ironpro.ma/revendeurs.html"/>
+  </url>
+
+  <!-- À propos -->
+  <url>
+    <loc>https://www.ironpro.ma/A-propos.html</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ironpro.ma/A-propos.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ironpro.ma/A-propos.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://www.ironpro.ma/A-propos.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.ironpro.ma/A-propos.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://www.ironpro.ma/A-propos.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://www.ironpro.ma/A-propos.html"/>
+  </url>
+
+  <!-- Conditions -->
+  <url>
+    <loc>https://www.ironpro.ma/Conditions.html</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ironpro.ma/Conditions.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ironpro.ma/Conditions.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://www.ironpro.ma/Conditions.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.ironpro.ma/Conditions.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://www.ironpro.ma/Conditions.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://www.ironpro.ma/Conditions.html"/>
+  </url>
+
+  <!-- Confidentialité -->
+  <url>
+    <loc>https://www.ironpro.ma/Confidentialite.html</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ironpro.ma/Confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ironpro.ma/Confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://www.ironpro.ma/Confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.ironpro.ma/Confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://www.ironpro.ma/Confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://www.ironpro.ma/Confidentialite.html"/>
+  </url>
+
+  <!-- Annulation -->
+  <url>
+    <loc>https://www.ironpro.ma/annulation.html</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.50</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ironpro.ma/annulation.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ironpro.ma/annulation.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://www.ironpro.ma/annulation.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.ironpro.ma/annulation.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://www.ironpro.ma/annulation.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://www.ironpro.ma/annulation.html"/>
+  </url>
+
+  <!-- Remboursement -->
+  <url>
+    <loc>https://www.ironpro.ma/remboursement.html</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.50</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ironpro.ma/remboursement.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ironpro.ma/remboursement.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://www.ironpro.ma/remboursement.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.ironpro.ma/remboursement.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://www.ironpro.ma/remboursement.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://www.ironpro.ma/remboursement.html"/>
+  </url>
+
+</urlset>

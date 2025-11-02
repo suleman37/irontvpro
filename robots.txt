@@ -1,0 +1,10 @@
+# Autoriser l'exploration du site
+User-agent: *
+Allow: /
+
+# (Optionnel) Si tu as des pages de recherche interne, évite leur indexation
+# Disallow: /search
+# Disallow: /?s=
+
+Sitemap: https://www.ironpro.ma/sitemap.xml
+Host: www.ironpro.ma
