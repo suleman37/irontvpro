@@ -499,7 +499,7 @@
 
     <!-- ===== CONTACT ===== -->
     <section id="contact" class="contact-section" aria-labelledby="contact-title">
-      <div class="container">
+      <div class="container contact-card">
         <h2 id="contact-title">Contactez-nous</h2>
 
         <form id="contactForm" class="contact-form" novalidate>
@@ -525,28 +525,23 @@
           <label for="cf-message">Votre message</label>
           <textarea id="cf-message" name="message" rows="5" placeholder="Votre message" required></textarea>
 
-         
+          <button type="submit" class="btn-violet" id="sendBtn">
+            <span class="btn-label">Envoyer</span>
+            <span class="btn-spinner" aria-hidden="true"></span>
+          </button>
         </form>
 
- <!-- Bouton Envoyer dans le <form> -->
-<button type="submit" class="btn-violet" id="sendBtn">
-  <span class="btn-label">Envoyer</span>
-  <span class="btn-spinner" aria-hidden="true"></span>
-</button>
+        <div class="contact-actions">
+          <a href="#" id="whatsappBtn" class="btn-whatsapp" aria-label="Ouvrir WhatsApp">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            WhatsApp
+          </a>
 
-<!-- Groupe WhatsApp / Mail -->
-<div class="contact-actions">
-  <a href="#" id="whatsappBtn" class="btn-whatsapp" aria-label="Ouvrir WhatsApp">
-    <i class="fab fa-whatsapp" aria-hidden="true"></i>
-    WhatsApp
-  </a>
-
-  <a href="#" id="mailBtn" class="btn-outline" aria-label="Envoyer un mail">
-    <i class="fas fa-envelope" aria-hidden="true"></i>
-    Envoyer un mail
-  </a>
-</div>
-
+          <a href="#" id="mailBtn" class="btn-outline" aria-label="Envoyer un mail">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            Envoyer un mail
+          </a>
+        </div>
 
         <p id="contactFormMessage" class="form-message" aria-live="polite"></p>
       </div>
