@@ -129,11 +129,17 @@ a{text-decoration:none;color:inherit}
 .section-title{font-size:var(--fs-h2);color:var(--brand-1);margin-bottom:10px}
 .section-subtitle,.intro-text{color:#60668a;max-width:900px;margin:0 auto 22px;line-height:1.75}
 .tier-title{font-size:var(--fs-h3);color:var(--brand-2);margin:48px 0 18px}
-.pricing-cards{display:flex;flex-wrap:wrap;gap:24px;justify-content:center;margin-bottom:24px}
+.pricing-cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:24px;
+  margin-bottom:24px;
+}
 .card{
   position:relative;background:linear-gradient(180deg,#ffffff,#fbfbff);
   border:1px solid var(--line);border-radius:var(--radius);padding:22px;
-  box-shadow:var(--shadow-1);text-align:left;flex:0 1 280px;
+  box-shadow:var(--shadow-1);text-align:left;
+  display:flex;flex-direction:column;min-width:0;
   transition:transform .18s ease, box-shadow .25s ease, border-color .2s ease;
 }
 .card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(26,15,64,.14);border-color:#dde2f4}
@@ -147,7 +153,7 @@ a{text-decoration:none;color:inherit}
 
 /* Premium mise en avant */
 .pricing-cards > .card.highlight{
-  order:2;flex:0 1 320px;transform:scale(1.06);z-index:2;border:2px solid var(--brand-1);
+  order:2;transform:scale(1.06);z-index:2;border:2px solid var(--brand-1);
   box-shadow:0 14px 44px rgba(0,227,165,.25);
   background:linear-gradient(180deg,#ffffff,#f5fbff);
 }
@@ -237,7 +243,7 @@ a{text-decoration:none;color:inherit}
   box-shadow:0 14px 36px rgba(53,167,255,.36), 0 0 0 8px rgba(0,227,165,.16);
 }
 @media (max-width: 900px){
-  .pricing-cards{flex-direction:column;align-items:center}
+  .pricing-cards{grid-template-columns:minmax(0,1fr)}
   .pricing .order-btn{width:100%;max-width:none;padding:16px 22px}
 }
 
