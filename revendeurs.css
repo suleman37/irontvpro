@@ -176,21 +176,20 @@ a{text-decoration:none;color:inherit}
 .popup-content .submit-btn:hover{transform:translateY(-2px) scale(1.06);filter:brightness(1.08);box-shadow:0 16px 44px rgba(53,167,255,.42),0 0 0 10px rgba(0,227,165,.18)}
 @media (max-width: 480px){.popup-content .submit-btn{width:100%;min-width:0}}
 
-/* Footer clair */
-.footer{background:linear-gradient(180deg,#fff,#fafaff);color:#4a4f67;padding:56px 20px 24px;border-top:1px solid var(--line)}
-.footer a{color:#4a4f67}
-.footer a:hover{color:#1d2140;text-decoration:underline;text-underline-offset:3px}
-.footer-container{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(12,1fr);column-gap:32px;row-gap:28px}
+/* Footer */
+.footer{background:#000;color:#f1f5ff;padding:40px 20px 32px;border-top:1px solid rgba(255,255,255,.12)}
+.footer a{color:#f6f8ff;display:inline-block}
+.footer a:hover{color:var(--brand-2,#35a7ff);text-decoration:underline;text-underline-offset:3px}
+.footer-container{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(12,1fr);column-gap:28px;row-gap:20px}
 .footer-section{grid-column:span 4;min-width:0}
-.footer h4{font-size:1.05rem;font-weight:700;color:#1f2342;margin:0 0 12px}
-.footer p{color:#5b5f79;font-size:.95rem}
+.footer h4{font-size:1.05rem;font-weight:700;color:#eef2ff;margin:0 0 12px}
+.footer p{color:#c9d2ea;font-size:.95rem;margin:0}
 .footer ul{list-style:none;padding:0;margin:0}
-.footer li+li{margin-top:10px}
-.icon-svg{width:18px;height:18px;flex-shrink:0;color:var(--brand-2);fill:currentColor;transition:transform .2s ease}
-.footer a:hover .icon-svg{transform:translateY(-1px) scale(1.08)}
-.footer-bottom{max-width:1200px;margin:24px auto 0;padding-top:18px;border-top:1px solid var(--line);text-align:center;color:#6a6f89;font-size:.9rem}
+.footer li+li{margin-top:8px}
+.icon-svg{display:none}
+.footer-bottom{max-width:1200px;margin:20px auto 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.12);text-align:center;color:#aeb7d9;font-size:.9rem}
 @media (max-width: 1024px){.footer-container{grid-template-columns:repeat(6,1fr)}.footer-section{grid-column:span 6}}
-@media (max-width: 640px){.footer{padding:44px 16px 20px}.footer-container{grid-template-columns:repeat(4,1fr);column-gap:20px;row-gap:22px}.footer-section{grid-column:span 4}}
+@media (max-width: 640px){.footer{padding:32px 16px 24px}.footer-container{grid-template-columns:repeat(4,1fr);column-gap:16px;row-gap:18px}.footer-section{grid-column:span 4}}
 
 /* WhatsApp FAB */
 #whatsapp-button{position:fixed;bottom:20px;right:20px;z-index:9999;width:64px;height:64px;display:grid;place-items:center;background:#25D366;color:#060606;border-radius:50%;box-shadow:0 10px 24px rgba(0,0,0,.12),0 0 0 4px rgba(37,211,102,.16);transition:transform .2s ease, box-shadow .2s ease, filter .2s ease}
