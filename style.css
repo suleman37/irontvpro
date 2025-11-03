@@ -205,6 +205,9 @@ a{text-decoration:none;color:inherit}
   align-items:stretch;
   grid-auto-rows:1fr;
 }
+.pricing-cards + .tier-title{
+  margin-top:108px;
+}
 .card{
   position:relative;
   margin-top:60px;
