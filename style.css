@@ -481,8 +481,7 @@ a{text-decoration:none;color:inherit}
 /* Apps */
 .app-section{
   padding:90px 0;
-  background:radial-gradient(120% 140% at 50% 0%, rgba(14,165,233,.12), transparent 65%) ,
-             linear-gradient(180deg,#f8fbff 0%,#ffffff 100%);
+  background:var(--bg-2);
 }
 .app-section .section-title{
   color:#0f172a;
@@ -491,11 +490,11 @@ a{text-decoration:none;color:inherit}
   font-size:clamp(2rem,1.6vw + 1.4rem,2.6rem);
 }
 .app-intro{
-  max-width:980px;
+  width:100%;
   margin:0 auto 48px;
   display:flex;
   flex-direction:column;
-  gap:24px;
+  gap:32px;
 }
 .video-wrapper{
   position:relative;
@@ -509,22 +508,17 @@ a{text-decoration:none;color:inherit}
 }
 .video-wrapper iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .app-summary{
-  background:linear-gradient(180deg,#fcfeff 0%,#f5f9ff 100%);
-  border-radius:24px;
-  padding:28px 32px;
-  border:1px solid rgba(148,163,184,.18);
+  display:flex;
+  flex-direction:column;
+  gap:18px;
   color:#1e293b;
   line-height:1.85;
-  box-shadow:0 28px 64px -56px rgba(15,23,42,.35);
 }
 .app-summary p{
   margin:0;
 }
-.app-summary p + p{
-  margin-top:18px;
-}
 .app-summary p:first-of-type{
-  font-size:1.1rem;
+  font-size:1.08rem;
   font-weight:500;
   color:#0f172a;
 }
@@ -545,7 +539,8 @@ a{text-decoration:none;color:inherit}
   }
   .app-summary{
     flex:1 1 42%;
-    padding:36px 38px;
+    padding:0;
+    justify-content:center;
   }
 }
 .app-content{
