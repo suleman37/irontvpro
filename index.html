@@ -382,53 +382,56 @@
       <div class="container">
         <h2 id="apps-title" class="section-title fade-in-up">Nos Applications</h2>
 
-        <div class="video-wrapper fade-in-up">
-          <!-- YouTube embed to autoplay when section enters viewport -->
-          <iframe
-            id="appVideo"
-            class="app-video"
-            width="100%" height="400"
-            src=""
-            data-src="https://www.youtube.com/embed/HmNeB9Oc0VA?autoplay=1&rel=0&controls=1&showinfo=0"
-            title="Iron TV Pro Télécharger - Installation IPTV 2025"
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
-          <script>
-            // Auto-play YouTube video when scrolled into view
-            document.addEventListener('DOMContentLoaded', function() {
-              var video = document.getElementById('appVideo');
-              var loaded = false;
-              if ('IntersectionObserver' in window) {
-                var observer = new IntersectionObserver(function(entries) {
-                  entries.forEach(function(entry) {
-                    if (entry.isIntersecting && !loaded) {
-                      video.src = video.getAttribute('data-src');
-                      loaded = true;
-                      observer.disconnect();
-                    }
-                  });
-                }, { threshold: 0.2 }); // 20% visible triggers load/play
-                observer.observe(video);
-              } else {
-                // Fallback: just load on DOM ready
-                video.src = video.getAttribute('data-src');
-              }
-            });
-          </script>
+        <div class="app-intro fade-in-up">
+          <div class="video-wrapper">
+            <!-- YouTube embed to autoplay when section enters viewport -->
+            <iframe
+              id="appVideo"
+              class="app-video"
+              width="400" height="400"
+              src="https://www.youtube.com/embed/HmNeB9Oc0VA?autoplay=1&rel=0&controls=1&showinfo=0"
+              data-src="https://www.youtube.com/embed/HmNeB9Oc0VA?autoplay=1&rel=0&controls=1&showinfo=0"
+              title="Iron TV Pro Télécharger - Installation IPTV 2025"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+            <script>
+              // Auto-play YouTube video when scrolled into view
+              document.addEventListener('DOMContentLoaded', function() {
+                var video = document.getElementById('appVideo');
+                var loaded = false;
+                if ('IntersectionObserver' in window) {
+                  var observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                      if (entry.isIntersecting && !loaded) {
+                        video.src = video.getAttribute('data-src');
+                        loaded = true;
+                        observer.disconnect();
+                      }
+                    });
+                  }, { threshold: 0.2 }); // 20% visible triggers load/play
+                  observer.observe(video);
+                } else {
+                  // Fallback: just load on DOM ready
+                  video.src = video.getAttribute('data-src');
+                }
+              });
+            </script>
+          </div>
+          <div class="app-summary">
+            <p>
+              Iron TV Pro Télécharger : comment installer l’IPTV en 2025 ? Vous cherchez à télécharger Iron TV Pro sur votre appareil ? Vous êtes au bon endroit. Ce service IPTV vous donne accès à plus de 13 000 chaînes, une VOD actualisée, et une qualité de streaming HD/4K, directement depuis votre TV, smartphone ou box.
+            </p>
+            <p>
+              Dans cet article, on vous guide étape par étape pour télécharger et installer Iron TV Pro en toute sécurité.
+              <strong>Et bonne nouvelle :</strong> vous pouvez le tester gratuitement pendant 24h avant de vous abonner !
+            </p>
+          </div>
         </div>
 
         <article class="app-content fade-in-up">
-          <p>
-            Iron TV Pro Télécharger : comment installer l’IPTV en 2025 ? Vous cherchez à télécharger Iron TV Pro sur votre appareil ? Vous êtes au bon endroit. Ce service IPTV vous donne accès à plus de 13 000 chaînes, une VOD actualisée, et une qualité de streaming HD/4K, directement depuis votre TV, smartphone ou box.
-          </p>
-          <p>
-            Dans cet article, on vous guide étape par étape pour télécharger et installer Iron TV Pro en toute sécurité.
-            <strong>Et bonne nouvelle :</strong> vous pouvez le tester gratuitement pendant 24h avant de vous abonner !
-          </p>
-
           <h3>Iron TV Pro Télécharger : 🔍 Qu’est-ce que Iron TV Pro ?</h3>
           <ul class="app-pill-list">
             <li>Iron IPTV</li>

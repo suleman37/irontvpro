@@ -380,8 +380,9 @@ a{text-decoration:none;color:inherit}
 
 /* Étapes */
 .steps{
-  max-width:1100px;
-  margin:70px auto 0;
+  width:100%;
+  max-width:none;
+  margin:70px 0 0;
   text-align:center;
 }
 .steps-lead{
@@ -393,9 +394,20 @@ a{text-decoration:none;color:inherit}
 }
 .steps-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  grid-template-columns:repeat(3,minmax(0,1fr));
   gap:26px;
   margin-top:36px;
+  align-items:stretch;
+}
+@media (max-width: 1024px){
+  .steps-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+@media (max-width: 640px){
+  .steps-grid{
+    grid-template-columns:1fr;
+  }
 }
 .step-card{
   position:relative;
@@ -478,18 +490,64 @@ a{text-decoration:none;color:inherit}
   margin-bottom:30px;
   font-size:clamp(2rem,1.6vw + 1.4rem,2.6rem);
 }
+.app-intro{
+  max-width:980px;
+  margin:0 auto 48px;
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+}
 .video-wrapper{
   position:relative;
   aspect-ratio:16/9;
   overflow:hidden;
   border-radius:24px;
-  margin:0 auto 40px;
-  max-width:980px;
+  margin:0;
   box-shadow:0 40px 80px -50px rgba(15,23,42,.35);
   border:1px solid rgba(148,163,184,.25);
   background:#020817;
 }
 .video-wrapper iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.app-summary{
+  background:linear-gradient(180deg,#fcfeff 0%,#f5f9ff 100%);
+  border-radius:24px;
+  padding:28px 32px;
+  border:1px solid rgba(148,163,184,.18);
+  color:#1e293b;
+  line-height:1.85;
+  box-shadow:0 28px 64px -56px rgba(15,23,42,.35);
+}
+.app-summary p{
+  margin:0;
+}
+.app-summary p + p{
+  margin-top:18px;
+}
+.app-summary p:first-of-type{
+  font-size:1.1rem;
+  font-weight:500;
+  color:#0f172a;
+}
+.app-intro .video-wrapper{
+  width:100%;
+}
+.app-intro .video-wrapper iframe{
+  border-radius:inherit;
+}
+@media (min-width: 992px){
+  .app-intro{
+    flex-direction:row;
+    align-items:stretch;
+    gap:32px;
+  }
+  .app-intro .video-wrapper{
+    flex:1 1 58%;
+  }
+  .app-summary{
+    flex:1 1 42%;
+    padding:36px 38px;
+  }
+}
 .app-content{
   max-width:960px;
   margin:0 auto;
@@ -503,11 +561,6 @@ a{text-decoration:none;color:inherit}
   display:flex;
   flex-direction:column;
   gap:26px;
-}
-.app-content > p:first-of-type{
-  font-size:1.1rem;
-  font-weight:500;
-  color:#0f172a;
 }
 .app-content h3{
   font-size:1.45rem;
