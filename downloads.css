@@ -35,82 +35,179 @@
 
 /* CARD */
 .dl-card{
-  background:linear-gradient(180deg,#ffffff,#f9fbff);
-  border:1px solid #e9ecf5; border-radius:16px; padding:20px;
-  box-shadow:0 10px 26px rgba(26,15,64,.06);
-  display:flex; flex-direction:column; gap:10px;
+  position:relative;
+  width:100%;
+  max-width:360px;
+  padding:150px 28px 36px;
+  border-radius:30px;
+  background:
+    linear-gradient(180deg,#ffffff 0%,#f5f8ff 100%) padding-box,
+    linear-gradient(135deg,rgba(56,189,248,.42),rgba(99,102,241,.28)) border-box;
+  border:1px solid transparent;
+  box-shadow:0 32px 100px -60px rgba(15,23,42,.5);
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+  text-align:center;
+  align-items:center;
+  transition:transform .24s ease, box-shadow .32s ease;
 }
-.dl-meta{ display:flex; align-items:center; gap:10px; }
-.dl-meta h2{ margin:0; font-size:1.2rem; }
+.dl-card::before{
+  content:"";
+  position:absolute;
+  top:-74px;
+  left:50%;
+  transform:translateX(-50%);
+  width:130px;
+  height:130px;
+  border-radius:50%;
+  background:
+    linear-gradient(180deg,#ffffff 0%,#f9fbff 100%) padding-box,
+    linear-gradient(135deg,rgba(56,189,248,.5),rgba(99,102,241,.38)) border-box;
+  border:6px solid transparent;
+  box-shadow:0 40px 80px -40px rgba(14,165,233,.5);
+  z-index:0;
+  pointer-events:none;
+}
+.dl-card:hover{
+  transform:translateY(-12px);
+  box-shadow:0 52px 140px -70px rgba(15,23,42,.56);
+}
+.dl-card .dl-logo{
+  position:absolute;
+  top:-42px;
+  left:50%;
+  transform:translateX(-50%);
+  width:94px;
+  height:94px;
+  object-fit:contain;
+  filter:drop-shadow(0 18px 36px rgba(15,23,42,.22));
+  z-index:1;
+}
+.dl-meta{
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.dl-meta h2{
+  margin:0;
+  font-size:1.18rem;
+  font-weight:700;
+}
 .dl-meta .tag{
-  margin-left:auto; font-size:.8rem; font-weight:800; padding:4px 8px; border-radius:999px;
-  color:#061019; background:linear-gradient(45deg,var(--brand-1,#00e3a5),var(--brand-2,#35a7ff));
+  font-size:.76rem;
+  font-weight:800;
+  padding:6px 12px;
+  border-radius:999px;
+  color:#0b1d2b;
+  background:linear-gradient(135deg,var(--brand-1,#00e3a5),var(--brand-2,#35a7ff));
+  box-shadow:0 10px 20px rgba(53,167,255,.24);
 }
-.dl-card .desc{ color:#3d4462; margin:0; }
-.dl-card .bullets{ margin:0; padding-left:18px; color:#4b5374; }
-.dl-card .bullets li{ margin:4px 0; }
+.dl-card .desc{
+  color:#3d4664;
+  margin:0;
+  font-size:.98rem;
+}
+.dl-card .bullets{
+  list-style:none;
+  padding:0;
+  margin:8px 0 16px;
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  text-align:left;
+  color:#313c5a;
+}
+.dl-card .bullets li{
+  position:relative;
+  padding-left:28px;
+  font-weight:500;
+}
+.dl-card .bullets li::before{
+  content:"";
+  position:absolute;
+  top:8px;
+  left:0;
+  width:14px;
+  height:14px;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--brand-1,#00e3a5),var(--brand-2,#35a7ff));
+  box-shadow:0 0 0 6px rgba(53,167,255,.16);
+}
 .dl-card .actions{
-  display:flex; gap:10px; align-items:center; margin-top:auto; flex-wrap:wrap;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:12px;
+  margin-top:auto;
+  width:100%;
 }
 .dl-card .btn{
-  background:linear-gradient(45deg,var(--brand-1,#00e3a5),var(--brand-2,#35a7ff));
-  color:#061019; padding:12px 18px; border-radius:999px; font-weight:900; box-shadow:0 8px 22px rgba(53,167,255,.18);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  width:clamp(190px,72%,240px);
+  background:linear-gradient(135deg,var(--brand-1,#00e3a5),var(--brand-2,#35a7ff));
+  color:#05121e;
+  padding:13px 22px;
+  border-radius:999px;
+  font-weight:900;
+  box-shadow:0 16px 36px -18px rgba(53,167,255,.4);
+  transition:transform .2s ease, box-shadow .25s ease, filter .18s ease;
 }
-.dl-card .btn:hover{ transform:translateY(-2px); box-shadow:0 14px 32px rgba(53,167,255,.28); }
+.dl-card .btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 26px 48px -20px rgba(53,167,255,.45);
+  filter:brightness(1.05);
+}
 .dl-card .copy{
-  border:2px solid var(--violet-1); background:#fff; color:#2a2e45; padding:10px 14px; border-radius:999px; font-weight:800;
+  border:2px solid rgba(99,102,241,.55);
+  background:#ffffff;
+  color:#24324f;
+  padding:11px 18px;
+  border-radius:999px;
+  font-weight:800;
+  box-shadow:0 10px 24px -18px rgba(99,102,241,.32);
+  transition:background .2s ease, transform .2s ease;
 }
-.dl-card .copy:hover{ background:rgba(108,92,231,.06); }
+.dl-card .copy:hover{
+  background:rgba(99,102,241,.08);
+  transform:translateY(-1px);
+}
 
 /* HELP */
 .dl-help{ padding-bottom:64px; }
 .dl-help h3{ color:var(--violet-1); margin-bottom:8px; }
 .dl-help ol{ color:#3b3f59; line-height:1.7; }
 
-/* Centrer la grille dans le conteneur */
+/* Centrage de la grille */
 .dl-grid{
-  max-width: 1100px;             /* centre la grille */
-  margin-inline: auto;
-  justify-items: center;         /* centre chaque carte */
+  max-width:1100px;
+  margin-inline:auto;
+  justify-items:center;
 }
-
-/* Carte centrée */
-.dl-card{
-  align-items: center;           /* centre tous les enfants */
-  text-align: center;
-  width: 100%;
-  max-width: 360px;              /* largeur confortable */
-  padding-top: 22px;
-}
-
-/* Logo en haut, centré */
-.dl-logo{
-  width: 110px; height: 110px; object-fit: contain;
-  margin-bottom: 10px;
-  filter: drop-shadow(0 6px 16px rgba(23,23,50,.08));
-}
-
-/* Titre + badge */
-.dl-meta{
-  width: 100%;
-  justify-content: center;
-  gap: 10px;
-}
-.dl-meta .tag{ margin-left: 0; }
-
-/* Liste centrée et compacte */
-.dl-card .bullets{
-  list-style: none; padding: 0; margin: 6px 0 10px;
-}
-.dl-card .bullets li::before{
-  content: "• "; color: var(--violet-1); font-weight: 900;
-}
-
-/* Boutons : centrés et sur 2 lignes max */
-.dl-card .actions{ justify-content: center; }
 
 /* Responsive — 1 carte par ligne sous 640px */
 @media (max-width: 640px){
   .dl-grid{ grid-template-columns: 1fr; }
-  .dl-card{ max-width: 480px; margin-inline: auto; }
+  .dl-card{
+    max-width:480px;
+    margin-inline:auto;
+    padding:150px 24px 34px;
+  }
+  .dl-card::before{
+    width:120px;
+    height:120px;
+    top:-64px;
+  }
+  .dl-card .dl-logo{
+    top:-34px;
+    width:86px;
+    height:86px;
+  }
 }

@@ -200,9 +200,11 @@ a{text-decoration:none;color:inherit}
 .pricing-cards{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:24px;
+  gap:28px;
+  margin-top:60px;
   margin-bottom:56px;
   align-items:stretch;
+  justify-items:center;
   grid-auto-rows:1fr;
 }
 .pricing-cards + .tier-title{
@@ -210,135 +212,147 @@ a{text-decoration:none;color:inherit}
 }
 .card{
   position:relative;
-  margin-top:60px;
-  padding:62px 28px 30px;
-  background:#fff;
-  border-radius:28px;
-  border:1px solid rgba(15,23,42,.08);
-  box-shadow:0 36px 80px -32px rgba(15,23,42,.38);
+  width:100%;
+  max-width:390px;
+  padding:170px 36px 44px;
+  background:
+    linear-gradient(180deg,#ffffff 0%,#f6f9ff 100%) padding-box,
+    linear-gradient(135deg,rgba(56,189,248,.38),rgba(99,102,241,.28)) border-box;
+  border-radius:34px;
+  border:1px solid transparent;
+  box-shadow:0 42px 120px -60px rgba(15,23,42,.5);
   text-align:center;
   display:flex;
   flex-direction:column;
   align-items:center;
-  min-width:0;
-  gap:10px;
-  height:100%;
-  margin-bottom:18px;
+  gap:20px;
   isolation:isolate;
-  transition:transform .2s ease, box-shadow .3s ease, border-color .2s ease;
+  transition:transform .24s ease, box-shadow .32s ease;
 }
-.card::after{
+.card::before{
   content:"";
   position:absolute;
-  top:-52px;
+  top:-54px;
   left:50%;
   transform:translateX(-50%);
-  width:112px;
-  height:112px;
+  width:132px;
+  height:132px;
   border-radius:50%;
   background:
-    url("iron-tv-pro-logo.png") center/58px no-repeat,
-    linear-gradient(#fff,#fff) padding-box,
-    linear-gradient(135deg,#48c6ef,#6f86d6) border-box;
+    url("iron-tv-pro-logo.png") center/72px no-repeat,
+    linear-gradient(180deg,#ffffff 0%,#f5f9ff 100%) padding-box,
+    linear-gradient(135deg,rgba(56,189,248,.5),rgba(14,165,233,.38)) border-box;
   background-origin:content-box, padding-box, border-box;
   background-clip:content-box, padding-box, border-box;
-  border:5px solid transparent;
-  box-shadow:0 20px 46px rgba(59,97,198,.28);
+  border:7px solid transparent;
+  box-shadow:0 40px 72px -36px rgba(14,165,233,.5);
+  z-index:1;
+  pointer-events:none;
 }
 .card:hover{
-  transform:translateY(-10px);
-  box-shadow:0 48px 96px -32px rgba(15,23,42,.45);
-  border-color:rgba(15,23,42,.14);
+  transform:translateY(-12px);
+  box-shadow:0 78px 160px -70px rgba(15,23,42,.55);
+}
+.card > *{
+  position:relative;
+  z-index:2;
 }
 .card h4{
-  font-size:1.28rem;
-  font-weight:700;
-  letter-spacing:.04em;
+  font-size:1.24rem;
+  font-weight:800;
+  letter-spacing:.08em;
   text-transform:uppercase;
   color:#0f172a;
-  margin-bottom:2px;
+  margin:0;
 }
 .duration{
   color:#4b556b;
-  font-size:1rem;
-  font-weight:600;
-  letter-spacing:.06em;
+  font-size:.96rem;
+  font-weight:700;
+  letter-spacing:.1em;
   text-transform:uppercase;
-  margin-bottom:2px;
+  margin:0;
 }
 .price{
-  font-size:2.6rem;
-  color:#0f172a;
-  margin:12px 0 16px;
-  font-weight:800;
-  line-height:1.1;
+  font-size:2.9rem;
+  font-weight:900;
+  line-height:1.05;
+  margin:18px 0 16px;
+  background:linear-gradient(120deg,#0ea5e9,#2563eb);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  color:transparent;
 }
 .card ul{
   list-style:none;
   padding:0;
-  margin:18px 0 30px;
-  color:#334155;
+  margin:12px 0 30px;
+  color:#1f2937;
   width:100%;
   display:flex;
   flex-direction:column;
-  gap:12px;
+  gap:14px;
   text-align:left;
 }
 .card ul li{
   display:flex;
-  gap:12px;
-  align-items:flex-start;
-  font-size:.98rem;
+  gap:14px;
+  align-items:center;
+  font-size:1rem;
+  font-weight:500;
 }
 .card ul li::before{
-  content:"\f00c";
-  font-family:"Font Awesome 5 Free";
-  font-weight:900;
-  width:24px;
-  height:24px;
-  border-radius:10px;
+  content:"";
+  width:16px;
+  height:16px;
+  border-radius:50%;
   background:linear-gradient(135deg,#22d3ee,#14b8a6);
-  color:#fff;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
+  box-shadow:0 0 0 8px rgba(20,184,166,.18);
   flex-shrink:0;
-  margin-top:2px;
-  box-shadow:0 10px 20px rgba(20,184,166,.25);
 }
 .card .btn{
-  width:100%;
-  padding:15px 0;
+  width:clamp(220px,72%,300px);
+  padding:16px 0;
   display:inline-flex;
   justify-content:center;
-  border-radius:14px;
-  font-size:1rem;
-  font-weight:700;
-  box-shadow:0 16px 32px rgba(53,167,255,.25);
+  border-radius:18px;
+  font-size:1.02rem;
+  font-weight:800;
+  box-shadow:0 20px 44px -22px rgba(53,167,255,.35);
 }
 
 /* Premium mise en avant */
 .pricing-cards > .card.highlight{
   order:2;
   z-index:2;
-  border:2px solid rgba(56,189,248,.4);
-  box-shadow:0 54px 120px -40px rgba(37,99,235,.44);
-  background:linear-gradient(180deg,#ffffff 0%,#f4f8ff 100%);
+  background:
+    linear-gradient(180deg,#ffffff 0%,#f1fbff 100%) padding-box,
+    linear-gradient(135deg,rgba(56,189,248,.58),rgba(16,185,129,.45)) border-box;
+  box-shadow:0 98px 180px -80px rgba(56,189,248,.52);
+  transform:translateY(-16px);
 }
 .pricing-cards > .card.highlight::before{
+  background:
+    url("iron-tv-pro-logo.png") center/72px no-repeat,
+    linear-gradient(180deg,#ffffff 0%,#f3fcff 100%) padding-box,
+    linear-gradient(135deg,rgba(56,189,248,.6),rgba(16,185,129,.45)) border-box;
+}
+.pricing-cards > .card.highlight::after{
   content:"Offre populaire";
   position:absolute;
-  top:18px;
-  right:22px;
-  background:rgba(56,189,248,.18);
-  color:#0f172a;
+  top:20px;
+  right:24px;
+  background:rgba(56,189,248,.24);
+  color:#0d1f2f;
   font-size:.75rem;
   font-weight:700;
   letter-spacing:.08em;
   padding:6px 14px;
   border-radius:999px;
   text-transform:uppercase;
-  box-shadow:0 6px 18px rgba(56,189,248,.18);
+  box-shadow:0 12px 26px -16px rgba(56,189,248,.45);
+  z-index:3;
 }
 .pricing-cards > .card.highlight .price{
   background:linear-gradient(90deg,#2563eb,#0ea5e9,#10b981);
@@ -362,19 +376,30 @@ a{text-decoration:none;color:inherit}
 
 @media (max-width: 640px){
   .card{
-    margin-top:64px;
-    padding:68px 22px 30px;
+    margin-top:70px;
+    padding:150px 26px 36px;
+    gap:18px;
   }
-  .card::after{
-    width:108px;
-    height:108px;
-    top:-58px;
+  .card::before{
+    width:116px;
+    height:116px;
+    top:-48px;
+    background:
+      url("iron-tv-pro-logo.png") center/60px no-repeat,
+      linear-gradient(180deg,#ffffff 0%,#f5f9ff 100%) padding-box,
+      linear-gradient(135deg,rgba(56,189,248,.5),rgba(14,165,233,.38)) border-box;
+  }
+  .pricing-cards > .card.highlight::after{
+    top:18px;
+    left:50%;
+    right:auto;
+    transform:translateX(-50%);
   }
   .price{
-    font-size:2.3rem;
+    font-size:2.4rem;
   }
   .card ul{
-    gap:10px;
+    gap:12px;
   }
 }
 
