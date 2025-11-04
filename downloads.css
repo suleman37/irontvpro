@@ -29,8 +29,11 @@
 
 /* GRID */
 .dl-grid{
-  display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:18px; padding:26px 0 34px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  column-gap:10px;
+  row-gap:50px;
+  padding:16px 0 34px;
 }
 
 /* CARD */
@@ -39,6 +42,7 @@
   width:100%;
   max-width:360px;
   padding:150px 28px 36px;
+  margin-top:50px;
   border-radius:30px;
   background:
     linear-gradient(180deg,#ffffff 0%,#f5f8ff 100%) padding-box,
@@ -194,7 +198,10 @@
 
 /* Responsive — 1 carte par ligne sous 640px */
 @media (max-width: 640px){
-  .dl-grid{ grid-template-columns: 1fr; }
+  .dl-grid{
+    grid-template-columns: 1fr;
+    row-gap:120px;
+  }
   .dl-card{
     max-width:480px;
     margin-inline:auto;
